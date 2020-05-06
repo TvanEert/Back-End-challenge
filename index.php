@@ -1,3 +1,5 @@
+<?php require('connection.php'); ?>
+<?php require('Statements/list_statements.php');?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +9,19 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <title>To-Do List</title>
-    <?php require('connection.php') ?>
 </head>
 <body>
 <div class="h-100 jumbotron">
   <h1 class="display-4">To-Do List</h1>
-  <a class="btn d-inline-block btn-primary btn-lg" href="#" role="button">Add list</a>
   <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p>Lists:</p>
+  <hr class="my-4">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#List-Add-Modal">
+  Add List
+  </button>
+  <?php require('Modals/add_list_modal.php'); 
+  
+  ?>
+
 </body>
 </html>
