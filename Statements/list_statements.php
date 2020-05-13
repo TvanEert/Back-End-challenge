@@ -33,9 +33,6 @@ function AddList($conn, $name){
 }
 
 function DeleteList($conn, $id){
-  var_dump($conn);
-  var_dump($id);
-
   $stmt1 = "DELETE FROM `lists` WHERE id = :id";
   $query1 = $conn->prepare($stmt1);
   $query1->bindParam(":id", $id);

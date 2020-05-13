@@ -8,7 +8,7 @@ $result = GetLists($conn);
     <hr class="my-4">
      <table class="table table-striped lead">
         <thead>
-            <th scope="col">Naam</th>
+            <th scope="col">Name</th>
         </thead>
           <?php foreach ($result as $row){ ?>
            <tr class="clickableRow">
@@ -16,7 +16,7 @@ $result = GetLists($conn);
                 <td>
                     <a href="view/Delete_list.php?id=<?php echo $row['id'] ?>" class="btn btn-danger text-light float-right"><i class="fas fa-trash-alt"></i></a>
                     <a href="view/Update_list.php?id=<?php echo $row['id'] ?>" class="btn btn-warning text-light float-right"><i class="fas fa-edit"></i></a>
-                    <a href="?id=<?php echo $row['id'] ?>" class="btn btn-success text-light float-right"><i class="far fa-folder"></i></a>
+                    <a href="view/Open_list.php?id=<?php echo $row['id'] ?>" class="btn btn-success text-light float-right"><i class="far fa-folder"></i></a>
                 </td>
             </tr>
             <?php } ?>
