@@ -3,9 +3,9 @@
 require('../Includes/connection.php'); 
 require('../Statements/list_statements.php');
 
-$id = $_GET['id'];
+var_dump($_GET['id']);
 
-DeleteList($conn, $id);
+DeleteList($conn, $_GET['id']);
 
 header('location: ../index.php');
 

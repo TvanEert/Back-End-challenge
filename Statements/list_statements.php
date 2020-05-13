@@ -38,7 +38,7 @@ function DeleteList($conn, $id){
   $query1->bindParam(":id", $id);
   $query1->execute();
 
-  $stmt2 = "DELETE FROM `tasks` WHERE id = :id";
+  $stmt2 = "DELETE FROM `tasks` WHERE list_id = :id";
   $query2 = $conn->prepare($stmt2);
   $query2->bindParam(":id", $id);
   $query2->execute();
