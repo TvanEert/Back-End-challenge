@@ -1,14 +1,13 @@
-<?php include '../Includes/header.php'; 
-
-$id = $_GET['id'];
+<?php 
+require('../Includes/header.php'); 
 
 require('../Statements/list_statements.php');
-$result = GetList($conn, $id);
+$result = GetList($conn, $_GET['id']);
 
 ?>
 <h2 class="display-4">Lijst bewerken</h2>
 
-<form action="../Functionality/update_list.php?id=<?php echo $result['id'] ?>" method="post">
+<form action="../Functionality/edit_list.php?id=<?php echo $result['id'] ?>" method="post">
     <div class="form-group">
         <label for="">Geef een niewe naam aan de lijst</label>
         <input type="text" class="form-control" name="newName" value="<?php echo $result['name'] ?>">
@@ -17,4 +16,4 @@ $result = GetList($conn, $id);
 </form>
 
 
-<?php include '../Includes/footer.php'; ?>
+<?php require('../Includes/footer.php'); ?>

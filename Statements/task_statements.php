@@ -44,4 +44,17 @@ function DeleteTask($conn, $id){
     $query->execute();
   
     $conn = NULL;
-  }
+}
+
+function UpdateTask($conn, $name, $description, $duration, $status, $id){
+    $stmt = "UPDATE `tasks` SET name = :name, description = :description, duration = :duration, status = :status WHERE id = :id";
+    $query = $conn->prepare($stmt);
+    $query->bindParam(':id', $id); 
+    $query->bindParam(':name', $name); 
+    $query->bindParam(':description', $description); 
+    $query->bindParam(':duration', $duration); 
+    $query->bindParam(':status', $status); 
+    $query->execute();
+  
+    $conn = NULL;
+}
