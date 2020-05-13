@@ -29,16 +29,16 @@
                 <td><?php echo $row['status']?></td>
                 <td><?php echo $row['duration']?></td>
                 <td>
-                    <a href="view/Delete_task.php?id=<?php echo $row['id'] ?>" class="btn btn-danger text-light float-right"><i class="fas fa-trash-alt"></i></a>
-                    <a href="view/Update_task.php?id=<?php echo $row['id'] ?>" class="btn btn-warning text-light float-right"><i class="fas fa-edit"></i></a>
+                    <a href="Delete_task.php?id=<?php echo $row['id'] ?>" class="btn btn-danger text-light float-right"><i class="fas fa-trash-alt"></i></a>
+                    <a href="Update_task.php?id=<?php echo $row['id'] ?>" class="btn btn-warning text-light float-right"><i class="fas fa-edit"></i></a>
                 </td>
             </tr>
             <?php } ?>
     </table>
     <hr class="my-4">
-    <button type="button" class="btn btn-primary" href="../index.php">
+    <a type="button" class="btn btn-primary" href="../index.php">
         Back
-    </button>
+    </a>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Task-Add-Modal">
         Add Task
     </button>

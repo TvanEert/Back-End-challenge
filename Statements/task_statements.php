@@ -12,6 +12,18 @@ function GetTasks($conn, $list_id){
     $conn = NULL;
 }
 
+function GetTask($conn, $id){
+    $stmt = "SELECT * FROM `tasks` WHERE id = :id";
+    $query = $conn->prepare($stmt);
+    $query->bindParam(":id", $id);
+    $query->execute();
+    $result = $query->fetch();
+
+    return $result;
+
+    $conn = NULL;
+}
+
 function AddTask($conn, $list_id, $name, $description, $duration, $status){
     $stmt = "INSERT INTO `tasks` (list_id, name, description, duration, status) VALUES (:list_id, :name, :description, :duration, :status)";
     $query = $conn->prepare($stmt);
@@ -24,3 +36,12 @@ function AddTask($conn, $list_id, $name, $description, $duration, $status){
 
     $conn = NULL;
 }
+
+function DeleteTask($conn, $id){
+    $stmt = "DELETE FROM `tasks` WHERE id = :id";
+    $query = $conn->prepare($stmt);
+    $query->bindParam(":id", $id);
+    $query->execute();
+  
+    $conn = NULL;
+  }

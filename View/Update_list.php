@@ -8,7 +8,7 @@ $result = GetList($conn, $id);
 ?>
 <h2 class="display-4">Lijst bewerken</h2>
 
-<form action="../Functionality/updateList.php?id=<?php echo $result['id'] ?>" method="post">
+<form action="../Functionality/update_list.php?id=<?php echo $result['id'] ?>" method="post">
     <div class="form-group">
         <label for="">Geef een niewe naam aan de lijst</label>
         <input type="text" class="form-control" name="newName" value="<?php echo $result['name'] ?>">
