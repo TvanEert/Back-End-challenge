@@ -1,0 +1,8 @@
+.progress {
+  display: table-row;
+  height: 55px;
+  overflow: unset;
+  font-size: unset;
+  background-color: unset;
+  border-radius: unset;
+}

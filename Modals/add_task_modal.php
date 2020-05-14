@@ -1,12 +1,11 @@
 <?php
 if (isset($_POST['submit'])) {
     AddTask($conn, $_GET['id'], $_POST["name"], $_POST["description"], $_POST["duration"], $_POST["status"]);
-    header("Refresh:0");
-} 
+    header('location: ../view/Open_list.php?id='. $_GET['id']);
+}
 ?>
 
-<div class="modal fade" id="Task-Add-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div class="modal fade" id="Task-Add-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

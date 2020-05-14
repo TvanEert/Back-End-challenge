@@ -5,7 +5,7 @@ require('../Statements/task_statements.php');
 $result = GetTask($conn, $_GET['id']);
 
 ?>
-<form action="../Functionality/edit_task.php?id=<?php echo $result['id'] ?>" method="POST">        
+<form action="../Functionality/edit_task.php?id=<?php echo $result['id'] ?>&listId=<?php echo $result['list_id'] ?>" method="POST">        
     <div class="form-group">
         <label>name</label>
         <input type="text" class="form-control" name="newName" placeholder="Input the task name" value="<?php echo $result['name']?>" required>

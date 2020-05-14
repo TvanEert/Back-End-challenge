@@ -1,12 +1,9 @@
 <?php
-
 if (isset($_POST['submit'])) {
     AddList($conn, $_POST['name']);
-    header("Refresh:0");
+    header('location: index.php');
 } 
-
 ?>
-
 <div class="modal fade" id="List-Add-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">

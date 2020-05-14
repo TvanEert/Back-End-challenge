@@ -6,7 +6,7 @@ $result = GetLists($conn);
  <div class="h-100 jumbotron">
     <h1 class="display-4">To-Do List</h1>
     <hr class="my-4">
-     <table class="table table-striped lead">
+     <table class="table lead">
         <thead>
             <th scope="col">Name</th>
         </thead>

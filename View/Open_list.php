@@ -15,7 +15,13 @@
 <div class="h-100 jumbotron">
     <h1 class="display-4"><?php echo $result['name']?></h1>
     <hr class="my-4">
-    <table class="table table-striped lead">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" onclick="filterTasks('All')" class="btn btn-secondary">All</button>
+        <button type="button" onclick="filterTasks('Open')" class="btn btn-secondary">Open</button>
+        <button type="button" onclick="filterTasks('In Progress')" class="btn btn-secondary">In Progress</button>
+        <button type="button" onclick="filterTasks('Finished')" class="btn btn-secondary">Finished</button>
+    </div>
+    <table class="table lead">
         <thead>
             <th scope="col">Name</th>
             <th scope="col">Description</th>
@@ -23,7 +29,7 @@
             <th scope="col">Duration in minutes</th>
         </thead>
           <?php foreach ($task_result as $row){ ?>
-           <tr class="clickableRow">
+           <tr class="taskRow <?php echo $row['status']?>">
                 <td><?php echo $row['name']?></td>
                 <td><?php echo $row['description']?></td>
                 <td><?php echo $row['status']?></td>
