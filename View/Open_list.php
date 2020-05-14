@@ -28,8 +28,8 @@
             <th scope="col">Status</th>
             <th scope="col">Duration in minutes</th>
         </thead>
-          <?php foreach ($task_result as $row){ ?>
-           <tr class="taskRow <?php echo $row['status']?>">
+        <?php foreach ($task_result as $row){ ?>
+            <tr class="taskRow <?php echo $row['status']?>">
                 <td><?php echo $row['name']?></td>
                 <td><?php echo $row['description']?></td>
                 <td><?php echo $row['status']?></td>
@@ -39,15 +39,11 @@
                     <a href="Update_task.php?id=<?php echo $row['id'] ?>" class="btn btn-warning text-light float-right"><i class="fas fa-edit"></i></a>
                 </td>
             </tr>
-            <?php } ?>
+        <?php } ?>
     </table>
     <hr class="my-4">
-    <a type="button" class="btn btn-primary" href="../index.php">
-        Back
-    </a>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Task-Add-Modal">
-        Add Task
-    </button>
+    <a type="button" class="btn btn-primary" href="../index.php">Back</a>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Task-Add-Modal">Add Task</button>
     <?php require('../Modals/add_task_modal.php'); ?>
 </div>
 
