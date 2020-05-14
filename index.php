@@ -1,5 +1,6 @@
 <?php require("Includes/header.php"); ?>
 <?php 
+//Require Statements for list funtions
 require('Statements/list_statements.php');
 $result = GetLists($conn);
 ?>

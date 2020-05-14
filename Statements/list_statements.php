@@ -1,5 +1,5 @@
 <?php
-
+//function to get all lists.
 function GetLists($conn){
   $stmt = "SELECT * FROM `lists`";
   $query = $conn->prepare($stmt);
@@ -11,6 +11,7 @@ function GetLists($conn){
   $conn = NULL;
 }
 
+//function to get list bassed on id.
 function GetList($conn, $id){
   $stmt = "SELECT * FROM `lists` WHERE id = :id";
   $query = $conn->prepare($stmt);
@@ -23,6 +24,7 @@ function GetList($conn, $id){
   $conn = NULL;
 }
 
+//function to add a list.
 function AddList($conn, $name){
   $stmt = "INSERT INTO `lists` SET name = :name";
   $query = $conn->prepare($stmt);
@@ -32,6 +34,7 @@ function AddList($conn, $name){
   $conn = NULL;
 }
 
+//function to delete a list with all of it's tasks
 function DeleteList($conn, $id){
   $stmt1 = "DELETE FROM `lists` WHERE id = :id";
   $query1 = $conn->prepare($stmt1);
@@ -46,6 +49,7 @@ function DeleteList($conn, $id){
   $conn = NULL;
 }
 
+//function to update a list
 function UpdateList($conn, $name, $id){
   $stmt = "UPDATE `lists` SET name = :name WHERE id = :id ";
   $query = $conn->prepare($stmt);

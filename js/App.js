@@ -16,6 +16,7 @@ function filterTasks(filterStatus) {
     }
   }
 
+  //display all rows with the filter class.
   for (let index = 0; index < statusRow.length; index++) {
     statusRow[index].style.display = "table-row";
   }
