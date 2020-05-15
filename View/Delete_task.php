@@ -1,8 +1,10 @@
 <?php 
-    require("../Includes/header.php");
+    require('../includes/connection.php'); 
 
     require('../Statements/task_statements.php');
     $result = GetTask($conn, $_GET['id']);
+
+    require("../Includes/header.php");
 ?>
 
 <h2 class="display-4">Delete list</h2>

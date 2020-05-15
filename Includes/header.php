@@ -1,4 +1,3 @@
-<?php require('connection.php'); ?>
 <html lang="en">
 
 <head>

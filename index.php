@@ -1,8 +1,13 @@
-<?php require("Includes/header.php"); ?>
 <?php 
-//Require Statements for list funtions
+require('includes/connection.php'); 
 require('Statements/list_statements.php');
+require('Functionality/add_list.php');
+
+//Require Statements for list funtions
+
 $result = GetLists($conn);
+
+require("Includes/header.php");
 ?>
  <div class="h-100 jumbotron">
     <h1 class="display-4">To-Do List</h1>
@@ -26,6 +31,31 @@ $result = GetLists($conn);
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#List-Add-Modal">
             Add List
         </button>
-        <?php require('Modals/add_list_modal.php'); ?>
+        <div class="modal fade" id="List-Add-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add List</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST">
+                    <div class="form-group">
+                        <label>List Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Input the list name" required>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" name="submit" class="btn btn-primary">Add List</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
     </div>
 <?php include("Includes/footer.php"); ?>

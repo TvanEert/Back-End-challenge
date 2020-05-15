@@ -1,9 +1,10 @@
 <?php 
-require('../Includes/header.php'); 
+require('../includes/connection.php'); 
 
 require('../Statements/task_statements.php');
 $result = GetTask($conn, $_GET['id']);
 
+require('../Includes/header.php'); 
 ?>
 <form action="../Functionality/edit_task.php?id=<?php echo $result['id'] ?>&listId=<?php echo $result['list_id'] ?>" method="POST">        
     <div class="form-group">
