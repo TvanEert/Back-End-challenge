@@ -8,7 +8,7 @@
     $result = GetList($conn, $_GET['id']);
     $task_result = GetTasks($conn, $_GET['id']);
 
-    require("../Includes/header.php"); 
+    include("../Includes/header.php"); 
 ?>
 
 <div class="h-100 jumbotron">
@@ -85,4 +85,4 @@
 </div>
 </div>
 
-<?php require("../Includes/footer.php"); ?>
+<?php include("../Includes/footer.php"); ?>

@@ -7,7 +7,7 @@ require('Functionality/add_list.php');
 
 $result = GetLists($conn);
 
-require("Includes/header.php");
+include("Includes/header.php");
 ?>
  <div class="h-100 jumbotron">
     <h1 class="display-4">To-Do List</h1>

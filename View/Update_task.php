@@ -4,7 +4,7 @@ require('../includes/connection.php');
 require('../Statements/task_statements.php');
 $result = GetTask($conn, $_GET['id']);
 
-require('../Includes/header.php'); 
+include('../Includes/header.php'); 
 ?>
 <form action="../Functionality/edit_task.php?id=<?php echo $result['id'] ?>&listId=<?php echo $result['list_id'] ?>" method="POST">        
     <div class="form-group">
@@ -31,3 +31,4 @@ require('../Includes/header.php');
     <input type="submit" class="btn btn-success" value="update">
     </div>
 </form>
+<?php include('../Includes/footer.php'); ?>

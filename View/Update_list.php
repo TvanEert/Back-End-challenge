@@ -4,7 +4,7 @@ require('../includes/connection.php');
 require('../Statements/list_statements.php');
 $result = GetList($conn, $_GET['id']);
 
-require('../Includes/header.php'); 
+include('../Includes/header.php'); 
 ?>
 <h2 class="display-4">Lijst bewerken</h2>
 
@@ -17,4 +17,4 @@ require('../Includes/header.php');
 </form>
 
 
-<?php require('../Includes/footer.php'); ?>
+<?php include('../Includes/footer.php'); ?>
